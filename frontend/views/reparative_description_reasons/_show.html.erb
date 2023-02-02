@@ -1,0 +1,20 @@
+<%
+   section_id = "reparative_description_reasons" if section_id.blank?
+%>
+<section id="<%= section_id %>" class="subrecord-form-dummy">
+
+  <h5><%= I18n.t("reparative_description_reason._plural") %></h5>
+
+  <%= readonly_context :reparative_description_reason do |readonly| %>
+
+    <div class="subrecord-form-container">
+      <%= readonly.list_for(reparative_description_reasons, "reparative_description_reasons[]") do |rdr, index| %>
+          <div class="subrecord-form-fields">
+            <%= readonly.label_with_field "content_warning_code", (rdr['content_warning_code'] && I18n.t('enumerations.content_warning_code.' + rdr['content_warning_code'], rdr['content_warning_code'])) %>
+          </div>
+      <% end %>
+    </div>
+
+  <% end %>
+
+</section>

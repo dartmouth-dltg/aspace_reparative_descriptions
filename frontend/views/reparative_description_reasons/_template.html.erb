@@ -1,0 +1,7 @@
+<% define_template "reparative_description_reason", jsonmodel_definition(:reparative_description_reason) do |form| %>
+  <div class="subrecord-form-fields">
+    <%= form.label_with_field('content_warning_code',
+                          form.select('content_warning_code', form.possible_options_for('content_warning_code', true), {}),
+                          :col_size => 9) %>
+  </div>
+<% end %>

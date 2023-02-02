@@ -1,0 +1,39 @@
+en:
+  plugins:
+    aspace_reparative_descriptions:
+      _plural: Reparative Description Changes
+      _singular: Reparative Description Change
+    reparative_description:
+      _plural: Reparative Description Changes
+      _singular: Reparative Description Change
+      _frontend:
+        action:
+          add: Add Reparative Description Change
+
+  reparative_description:
+    description: Description of change/evaluation
+    reparative_description_date: Date
+    section_title: Reparative Description Change(s)
+  
+  reparative_description_reason:
+    _plural: Reason(s) for Reparative Description Change
+    _singular: Reason for Reparative Description Change
+    _frontend:
+      action:
+        add: Add Reason for Reparative Description Change
+    section_title: Reason for Reparative Description Change
+    content_warning_code: Harmful Content Type
+
+  reparative_description_reasons_template: The description for this material was evaluated and updated to remediate %{reasons} on %{date}.
+  reparative_description_reasons_generic: This description was last revised based on The Statement of Harmful Content And Reparative Description workflow on %{date}.
+
+  reports:
+    reparative_descriptions_list_report:
+      title: Reparative Description Change List Report
+      description: >
+        List all Accessions, Resources, Archival Objects, and Digital Objects with Reparative Description changes.
+
+  search:
+    multi:
+      title_sort: Title
+      content_warnings_general_u_sbool: Reparative Description Change(s)

@@ -1,0 +1,9 @@
+<% define_template "reparative_description", jsonmodel_definition(:reparative_description) do |form| %>
+  <div class="subrecord-form-fields">
+    <%= form.label_and_date("reparative_description_date") %>
+    <%= form.label_and_textarea("description", {:field_opts => {:class => "mixed-content"}}) %>
+    <div class="subrecord-form-container">
+      <%= render_aspace_partial :partial => "shared/subrecord_form", :locals => {:form => form, :name => "reparative_description_reasons", :heading_size => "h4"} %>
+    </div>
+  </div>
+<% end %>

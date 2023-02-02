@@ -1,0 +1,21 @@
+<%
+   section_id = "reparative_descriptions" if section_id.blank?
+%>
+<section id="<%= section_id %>" class="subrecord-form-dummy">
+  <h3><%= I18n.t("plugins.reparative_description._plural") %></h3>
+  <%= readonly_context :reparative_description do |readonly| %>
+    <div class="subrecord-form-container">
+      <%= readonly.list_for(reparative_descriptions, "reparative_descriptions[]") do |rd, index| %>
+        <h4><%= I18n.t("plugins.reparative_description._singular") %></h4>
+        <div class="subrecord-form-fields">
+          <%= readonly.label_and_textfield "reparative_description_date" %>
+          <% desc = AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd) %>
+          <%= readonly.label_with_field "description", desc %>
+          <% if rd["reparative_description_reasons"].length > 0 %>
+            <%= render :partial => "reparative_description_reasons/show", :locals => {:reparative_description_reasons => rd["reparative_description_reasons"]} %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

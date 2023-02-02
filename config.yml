@@ -1,0 +1,17 @@
+no_automatic_routes: true
+parents:
+  accession:
+    name: reparative_descriptions
+    cardinality: zero_to_many
+  archival_object:
+    name: reparative_descriptions
+    cardinality: zero_to_many
+  resource:
+    name: reparative_descriptions
+    cardinality: zero_to_many
+  digital_object:
+    name: reparative_descriptions
+    cardinality: zero_to_many
+  digital_object_component:
+    name: reparative_descriptions
+    cardinality: zero_to_many

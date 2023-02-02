@@ -1,0 +1,113 @@
+.harmful-content-header {
+  margin-top: -20px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: #286090;
+}
+
+.harmful-content-header a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #fff;
+}
+
+.content-warnings {
+  display: inline-block;
+}
+
+.content-warnings .cw-tag {
+  display: inline-block;
+  margin: 0 0.5em 0.25em 0;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #ffc107;
+}
+
+.content-warnings.inherited-content-warnings .cw-tag {
+  cursor: auto;
+}
+
+.content-warnings .cw-tag:hover {
+  background-color: #ffca2c;
+}
+
+.content-warnings.inherited-content-warnings .cw-tag:hover {
+  background-color: #ffc107
+}
+
+.content-warnings .cw-text {
+  text-decoration: underline;
+}
+
+.content-warnings.inherited-content-warnings .cw-text {
+  text-decoration: none;
+}
+
+.content-warnings.inherited-content-warnings div {
+  margin-bottom: 0.25em;
+}
+
+.inherited-content-warning-prefix {
+  display: block;
+  margin-right: 0.5rem;
+}
+
+.content-warnings.inherited-content-warnings .cw-tag {
+  font-style: normal;
+}
+
+.content-warnings.inherited-content-warnings a {
+  text-transform: capitalize;
+}
+
+.content-warnings .cw-tag::before {
+  margin-right: 0.1em;
+  content: "\f02b";
+  font-family: FontAwesome;
+  text-decoration: none;
+}
+
+.aspace-content-warning-title {
+  font-weight: bold;
+}
+
+.aspace-content-warning-description {
+  display: block;
+}
+
+.aspace-offensive-content-tag-title {
+  display: block;
+  font-weight: bold;
+}
+
+.content-warning-external-link {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.content-warning-external-link:before {
+  content: "\f059";
+  margin-right: 0.25em;
+  font-family: FontAwesome;
+  font-style: normal;
+}
+
+#content-warning-sub {
+  margin-right: 0.5rem;
+}
+
+.offensive-content-submit {
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  background-color: #198754;
+}
+
+.offensive-content-submit:hover {
+  background-color: #157347;
+}
