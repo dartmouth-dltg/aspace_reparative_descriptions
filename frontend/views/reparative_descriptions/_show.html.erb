@@ -10,7 +10,7 @@
         <div class="subrecord-form-fields">
           <%= readonly.label_and_textfield "reparative_description_date" %>
           <% desc = AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd) %>
-          <%= readonly.label_with_field "description", desc %>
+          <%= readonly.label_with_field "description", clean_mixed_content(desc).html_safe %>
           <% if rd["reparative_description_reasons"].length > 0 %>
             <%= render :partial => "reparative_description_reasons/show", :locals => {:reparative_description_reasons => rd["reparative_description_reasons"]} %>
           <% end %>

@@ -3,7 +3,7 @@
   <% reparative_descriptions.each_with_index do |rd, idx| %>
     <li>
       <span class="aspace-reparative-descriptions-reasons">
-        <%= ReparativeDescriptionsPUIHelper.assemble_reparative_description_text(rd) %>
+        <%== process_mixed_content(ReparativeDescriptionsPUIHelper.assemble_reparative_description_text(rd)) %>
       </span>
     </li>
   <% end %>
