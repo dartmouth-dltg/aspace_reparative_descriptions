@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/SAA-SDT/EAD3/master/ead3.rng"
+      type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ead xmlns="http://ead3.archivists.org/schema/"><control countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" relatedencoding="marc" repositoryencoding="iso15511" scriptencoding="iso15924"><recordid instanceurl=""></recordid><filedesc><titlestmt><titleproper>Test Rep D</titleproper></titlestmt><publicationstmt><publisher>Rauner</publisher><num>TRD-1</num></publicationstmt></filedesc><maintenancestatus value="derived"/><maintenanceagency><agencyname>Rauner</agencyname></maintenanceagency><languagedeclaration><language langcode="eng">English</language><script scriptcode="Latn">Latin</script></languagedeclaration><maintenancehistory><maintenanceevent><eventtype value="derived"/><eventdatetime>2023-02-07T15:12:28-05:00</eventdatetime><agenttype value="machine"/><agent>ArchivesSpace v3.2.0</agent><eventdescription>This finding aid was produced using ArchivesSpace on Tuesday February  7, 2023 at 15:12</eventdescription></maintenanceevent></maintenancehistory></control><archdesc level="collection">
+  <did>
+    <unittitle>Test Rep D</unittitle>
+    <unitid>TRD-1</unitid>
+    <repository>
+      <corpname>
+        <part>Rauner</part>
+      </corpname>
+    </repository>
+    <langmaterial>
+      <language langcode="eng">English</language>
+    </langmaterial>
+    <physdescstructured coverage="whole" physdescstructuredtype="spaceoccupied">
+      <quantity>1</quantity>
+      <unittype>Linear Feet</unittype>
+    </physdescstructured>
+    <unitdatestructured datechar="creation" unitdatetype="inclusive">
+      <datesingle standarddate="2023-02-14">2023-02-14</datesingle>
+    </unitdatestructured>
+  </did>
+  <processinfo>
+    <head>Reparative Description Change(s)</head>
+    <p>This description was last revised based on The Statement of Harmful Content And Reparative Description workflow on 2023-02-14.</p>
+    <p>The description for this material was evaluated and updated to remediate Racist Content and Hateful Content on 2023-02-28. Description of change (#1) with <ref href="https://foo.com">a link</ref></p>
+    <p>The description for this material was evaluated and updated to remediate Harmful Content (general) on 2023-03-09. Description of change (#2) <emph render="italic">with italics</emph></p>
+  </processinfo>
+  <dsc/>
+</archdesc>
+</ead>

@@ -13,6 +13,11 @@ else
   AppConfig[:aspace_reparative_descriptions_note_type] = 'processinfo'
 end
 
+# Set default MARC export libray code for 500
+unless AppConfig.has_key?(:aspace_reparative_descriptions_org_code)
+  AppConfig[:aspace_reparative_descriptions_org_code] = 'xxx'
+end
+
 # Register our custom serialize steps.
 EADSerializer.add_serialize_step(EADAspaceReparativeDescriptionsSerialize)
 EAD3Serializer.add_serialize_step(EAD3AspaceReparativeDescriptionsSerialize)

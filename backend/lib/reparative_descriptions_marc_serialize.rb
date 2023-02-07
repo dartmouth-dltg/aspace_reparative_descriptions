@@ -17,10 +17,10 @@ class AspaceReparativeDescriptionsMARCSerialize
       @record.aspace_record['reparative_descriptions'].each do |rd|
         description = rd['description']
         rd_bp_description = AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd)
-        unless description.empty?
+        unless description.nil?
           rd_bp_description += ' ' + description
         end
-        extra_fields << DataField.new('500', ' ', ' ', [SubField.new('a', rd_bp_description), SubField.new('5','NhD')])
+        extra_fields << DataField.new('500', ' ', ' ', [SubField.new('a', rd_bp_description), SubField.new('5',AppConfig[:aspace_reparative_descriptions_org_code])])
       end
     end
 

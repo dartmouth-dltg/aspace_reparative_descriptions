@@ -40,8 +40,9 @@ This will create the tables required by the plugin.
 
 ## Configuration
 
-This plugin accepts two configuration options which control the visibility of Reparative Description Changes
-as facets in the staff application and allow for a user selectable ead tag for the informtion. 
+This plugin accepts three configuration options which control the visibility of Reparative Description Changes
+as facets in the staff application, allow for a user selectable ead tag for the information, and set your Library's
+MARC organization code. 
 
 Set either `staff_faceting` to `true` to enable the facet.
 
@@ -54,6 +55,9 @@ AppConfig[:aspace_content_warnings] = {
 Set `AppConfig[:aspace_reparative_descriptions_note_type]` to `odd` or `processinfo`. Defaults
 to `processinfo`.
 
+Set  `AppConfig[:aspace_reparative_descriptions_org_code]`. Defaults to 'xxx'. Example Dartmouth Library's
+org code is 'NhD'.
+
 ## Using the Plugin
 
 The plugin adds a new sub record to Accessions, Resources, Archival Objects, Digital Objects, 
@@ -63,6 +67,18 @@ The new sub record allows staff users to record reparative description changes. 
 simpleas a date, or include a custom descrption of what was changed and what type of harmful content
 was remediated. The choice of harmful content types is the same as the controlled value list 
 supplied by the harmful content plugin.
+
+### Note on customizing default language
+
+To customize the supplied statements, edit the appropraite locales file entries for
+
+```
+reparative_description_reasons_template: The description for this material was evaluated and updated to remediate %{reasons} on %{date}.
+```
+and
+```
+reparative_description_reasons_generic: This description was last revised based on The Statement of Harmful Content And Reparative Description workflow on %{date}.
+```
 
 ### Staff editing UI
 ![Staff data entry view](readme_images/ReparativeDescription-staff-data-entry.png)
@@ -93,7 +109,7 @@ digital object, and digital object component).
 EAD, EAD3, and pdf exports include sections with reparative description changes. These are included in 
 `<processinfo>` tags. Digital Object Components are not included in exports.
 
-MARC exports include an additional 520 field for each applied tag. Example: 520 4#$a{Content Warning}
+MARC exports include an additional 500 field for each applied tag. Example: 500##$a{ReparativeDescription}$5{Library_Code}
 
 ## Core Overrides
 

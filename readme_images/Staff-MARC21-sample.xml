@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:marc="http://www.loc.gov/MARC21/slim"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <record>
+    <leader>00000npcaa2200000 u 4500</leader>
+    <controlfield tag="008">230207s2023    xx                  eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="b">eng</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="041">
+      <subfield code="a">eng</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049"/>
+    <datafield ind1=" " ind2=" " tag="099">
+      <subfield code="a">TRD-1</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Test Rep D,</subfield>
+      <subfield code="f">2023-02-14</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1</subfield>
+      <subfield code="f">Linear Feet</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">This description was last revised based on The Statement of Harmful Content And Reparative Description workflow on 2023-02-14.</subfield>
+      <subfield code="5">NhD</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">The description for this material was evaluated and updated to remediate Racist Content and Hateful Content on 2023-02-28. Description of change (#1) with  a link  Description of change (#1) with  a link </subfield>
+      <subfield code="5">NhD</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">The description for this material was evaluated and updated to remediate Harmful Content (general) on 2023-03-09. Description of change (#2)  with italics  Description of change (#2)  with italics </subfield>
+      <subfield code="5">NhD</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="852">
+      <subfield code="a">Rauner</subfield>
+    </datafield>
+  </record>
+</collection>
