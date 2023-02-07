@@ -36,4 +36,4 @@ en:
   search:
     multi:
       title_sort: Title
-      content_warnings_general_u_sbool: Reparative Description Change(s)
+      reparative_descriptions_u_sbool: Reparative Description Change(s)
