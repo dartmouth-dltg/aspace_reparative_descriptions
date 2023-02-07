@@ -110,16 +110,16 @@ end
                     </dd>
                 <% end %>
 
-                <!-- Aspace Content Warning Customization Begin -->
-                <% if AppConfig[:plugins].include?('aspace_content_warnings') %>
-                    <% unless record.json['content_warnings'].blank? %>
-                      <dt><%= I18n.t('pdf_reports.content_warnings_heading') %></dt>
+                <!-- Aspace Reparative Descriptions Customization Begin -->
+                <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') %>
+                    <% unless record.json['reparative_descriptions'].blank? %>
+                      <dt><%= I18n.t('pdf_reports.reparative_descriptions_heading') %></dt>
                       <dd>
-                        <%= render(:partial => 'aspace_content_warnings', :locals => {:content_warnings => record.json['content_warnings']}) %>
+                        <%= render(:partial => 'aspace_reparative_descriptions', :locals => {:reparative_descriptions => record.json['reparative_descriptions']}) %>
                       </dd>
                     <% end %>
                 <% end %>
-                <!-- Aspace Content Warning Customization End -->
+                <!-- Aspace Reparative Descriptions Customization End -->
             </dl>
 
         </div>

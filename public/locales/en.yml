@@ -1,18 +1,6 @@
 en:
-  aspace_content_warnings: May Contain Harmful Content
-  aspace_content_warnings_more_info: Why we use these tags
-  aspace_content_warnings_email_to: " - Harmful Content Submission"
-  aspace_content_warnings_general_hc_statement_html: 'Please read our <a href="%{link}">statement on potentially harmful content</a>'
-  aspace_content_warnings_submit_btn: Submit
-  aspace_content_warnings_submit_btn_text: Help us add a Harmful Content Warning
-  aspace_content_warnings_public_submit: Help us add Harmful Content Warning(s)
-  aspace_content_warnings_submit_note: Please tell us if you feel this content may be harmful and why.
+  aspace_reparative_descriptions: Reparative Description Change(s)
 
   pdf_reports:
-    content_warnings_heading: May Contain Harmful Content
-    do_content_warnings_heading: Related Digital Object May Contain Harmful Content
-
-  search_results:
-    filter:
-      content_warnings_u_sstr: May Contain Harmful Content
-      content_warnings_general_u_sbool: May Contain Harmful Content
+    reparative_descriptions_heading: Reparative Description Change(s)
+    do_reparative_descriptions_heading: Related Digital Object Reparative Description Change(s)

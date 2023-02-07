@@ -22,6 +22,10 @@ class AspaceReparativeDescriptionsHelper
       end
       rd_reasons_text = I18n.t("reparative_description_reasons_template", :reasons => reasons, :date => date)
     end
+
+    unless rd['description'].nil?
+      rd_reasons_text += ' ' + rd['description']
+    end
     
     rd_reasons_text
   end

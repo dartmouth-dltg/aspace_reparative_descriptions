@@ -1,0 +1,10 @@
+<h2><%= t('aspace_reparative_descriptions') %></h2>
+<ul class="aspace-reparative-descriptions-list">
+  <% reparative_descriptions.each_with_index do |rd, idx| %>
+    <li>
+      <span class="aspace-reparative-descriptions-reasons">
+        <%= ReparativeDescriptionsPUIHelper.assemble_reparative_description_text(rd) %>
+      </span>
+    </li>
+  <% end %>
+</ul>

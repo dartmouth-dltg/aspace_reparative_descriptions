@@ -13,11 +13,6 @@ class AspaceReparativeDescriptionsEAD < EADSerializer
             xml.p {
               sanitize_mixed_content(AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd), xml, fragments)
             }
-            unless rd['description'].nil?
-              xml.p {
-                sanitize_mixed_content(rd['description'], xml, fragments)
-              }
-            end
           end
           }
       end
@@ -35,11 +30,6 @@ class AspaceReparativeDescriptionsEAD < EADSerializer
             xml.p {
               sanitize_mixed_content(AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd), xml, fragments)
             }
-            unless rd['description'].nil?
-              xml.p {
-                sanitize_mixed_content(rd['description'], xml, fragments)
-              }
-            end
           end
         }
       end
