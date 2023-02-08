@@ -14,7 +14,10 @@ class AspaceReparativeDescriptionsMARCSerialize
     extra_fields = []
     
     if @record.aspace_record['reparative_descriptions']
-      @record.aspace_record['reparative_descriptions'].each do |rd|
+      if AppConfig.has_key?(:aspace_reparative_descriptions_sort) && ['asc','desc'].include?(AppConfig[:aspace_reparative_descriptions_sort])
+        reparative_descriptions = AspaceReparativeDescriptionsHelper.sort_reparative_descriptions(@record.aspace_record['reparative_descriptions'])
+      end 
+      reparative_descriptions.each do |rd|
         description = rd['description']
         rd_bp_description = AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd)
         unless description.nil?

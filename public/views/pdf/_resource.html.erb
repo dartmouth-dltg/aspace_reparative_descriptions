@@ -87,10 +87,8 @@
 <!-- Aspace Reparative Descriptions Customization Begin -->
 <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') %>
     <% unless record.json['reparative_descriptions'].blank? %>
-        <dt><%= I18n.t('pdf_reports.reparative_descriptions_heading') %></dt>
-        <dd>
+        <h3><%= I18n.t('pdf_reports.reparative_descriptions_heading') %></h3>
         <%= render(:partial => 'aspace_reparative_descriptions', :locals => {:reparative_descriptions => record.json['reparative_descriptions']}) %>
-        </dd>
     <% end %>
 <% end %>
 <!-- Aspace Reparative Descriptions Customization End -->

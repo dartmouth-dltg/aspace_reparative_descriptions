@@ -1,7 +1,7 @@
 require 'aspace_logger'
 class AspaceReparativeDescriptionsHelper
 
-  def self.assemble_reparative_description_text(rd)
+  def self.assemble_reparative_description_text(rd, parse = false)
     cws = []
     date = rd['reparative_description_date']
     rd_reasons = rd['reparative_description_reasons']
@@ -28,6 +28,14 @@ class AspaceReparativeDescriptionsHelper
     end
     
     rd_reasons_text
+  end
+
+  def self.sort_reparative_descriptions(reparative_descriptions)
+    rds = reparative_descriptions.sort_by { |rd| rd['reparative_description_date'] }  
+    if AppConfig[:aspace_reparative_descriptions_sort] == 'desc'
+        rds.reverse!
+    end
+    rds
   end
 
 end

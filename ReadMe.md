@@ -40,23 +40,23 @@ This will create the tables required by the plugin.
 
 ## Configuration
 
-This plugin accepts three configuration options which control the visibility of Reparative Description Changes
-as facets in the staff application, allow for a user selectable ead tag for the information, and set your Library's
-MARC organization code. 
+This plugin accepts four configuration options which 
 
-Set either `staff_faceting` to `true` to enable the facet.
+1. control the visibility of Reparative Description Changes as facets in the staff application
+1. allow for a user selectable ead tag for the information
+1. sets your Library's MARC organization code
+1. sets the sort order in the PUI display and in all exports
 
-```
-AppConfig[:aspace_content_warnings] = {
-  'staff_faceting' => true,
-}
-```
+Set `AppConfig[:aspace_reparative_descriptions_faceting]` to `true` to enable the staff faceting
 
 Set `AppConfig[:aspace_reparative_descriptions_note_type]` to `odd` or `processinfo`. Defaults
 to `processinfo`.
 
-Set  `AppConfig[:aspace_reparative_descriptions_org_code]`. Defaults to 'xxx'. Example Dartmouth Library's
+Set  `AppConfig[:aspace_reparative_descriptions_org_code]`. Defaults to 'xxx'. For example, Dartmouth Library's
 org code is 'NhD'.
+
+Set `AppConfig[:aspace_reparative_descriptions_sort]` to `asc` or `desc`. Defaults to unordered - i.e. 
+the order as added in the staff interface.
 
 ## Using the Plugin
 
