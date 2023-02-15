@@ -4,7 +4,7 @@
       reparative_descriptions = ReparativeDescriptionsPUIHelper.sort_reparative_descriptions(reparative_descriptions)
     end 
   %>
-  <% reparative_descriptions.each do |rd| %>
+  <% Array(reparative_descriptions).each do |rd| %>
     <li>
         <p>
           <%== process_mixed_content(AspaceReparativeDescriptionsHelper.assemble_reparative_description_text(rd)) %>
