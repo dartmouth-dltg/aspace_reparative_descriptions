@@ -1,21 +1,22 @@
 <% Array(instances).each do |instance| %>
     <% next if instance['_inherited'] || (instance.key?('digital_object') && instance['digital_object']['_resolved']['publish'] == false) %>
     <% if instance['instance_type'] == 'digital_object' && instance['digital_object'] %>
+      <% reparative_descriptions = instance['digital_object']['_resolved']['reparative_descriptions'] %>
+      <% content_warnings = instance['digital_object']['_resolved']['content_warnings'] %>
       <% file_versions = instance['digital_object']['_resolved']['file_versions'] %>
       <%# Check if any file version will be added to the pdf. Only add content warnings if at least one file version #%>
-      <% include_reparative_descriptions = false %>
+      <% include_addition = false %>
       <% Array(file_versions).each do |file| %>
           <% if file['publish'] && file['file_uri'] && file['xlink_show_attribute'] != 'embed' %>
               <%# set this to true for later use #%>
-              <% include_reparative_descriptions = true %>
+              <% include_additions = true %>
               <dt><%= I18n.t('resource._public.digital_object') %></dt>
               <dd><%= link_to(file['file_uri'], file['file_uri']) %></dd>
           <% end %>
       <% end %>
     <% end %>
     <!-- Aspace Content Warning Customization Begin -->
-    <% content_warnings = instance['digital_object']['_resolved']['content_warnings'] %>
-    <% if AppConfig[:plugins].include?('aspace_content_warnings') && include_content_warnings %>
+    <% if AppConfig[:plugins].include?('aspace_content_warnings') && include_additions %>
         <% unless content_warnings.blank? %>
           <dt><%= I18n.t('pdf_reports.do_content_warnings_heading') %></dt>
           <dd>
@@ -25,8 +26,7 @@
     <% end %>
     <!-- Aspace Content Warning Customization End -->
     <!-- Aspace Reparative Description Customization Begin -->
-    <% reparative_descriptions = instance['digital_object']['_resolved']['reparative_descriptions'] %>
-    <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') && include_reparative_descriptions %>
+    <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') && include_additions %>
         <% unless reparative_descriptions.blank? %>
           <dt><%= I18n.t('pdf_reports.do_reparative_descriptions_heading') %></dt>
           <dd>
