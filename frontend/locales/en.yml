@@ -11,7 +11,7 @@ en:
           add: Add Reparative Description Change
 
   reparative_description:
-    description: Description of change/evaluation
+    description: Description of change or evaluation
     reparative_description_date: Date
     section_title: Reparative Description Change(s)
   
