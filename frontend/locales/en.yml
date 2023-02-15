@@ -16,12 +16,12 @@ en:
     section_title: Reparative Description Change(s)
   
   reparative_description_reason:
-    _plural: Reason(s) for Reparative Description Change
-    _singular: Reason for Reparative Description Change
+    _plural: Harmful Content Addressed with Change
+    _singular: Harmful Content Addressed with Change
     _frontend:
       action:
-        add: Add Reason for Reparative Description Change
-    section_title: Reason for Reparative Description Change
+        add: Add Harmful Content Addressed with Change
+    section_title: Harmful Content Addressed with Change
     content_warning_code: Harmful Content Type
 
   reparative_description_reasons_template: The description for this material was evaluated and updated to remediate %{reasons} on %{date}.
