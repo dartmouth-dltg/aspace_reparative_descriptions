@@ -14,6 +14,17 @@
       <% end %>
     <% end %>
     <!-- Aspace Content Warning Customization Begin -->
+    <% content_warnings = instance['digital_object']['_resolved']['content_warnings'] %>
+    <% if AppConfig[:plugins].include?('aspace_content_warnings') && include_content_warnings %>
+        <% unless content_warnings.blank? %>
+          <dt><%= I18n.t('pdf_reports.do_content_warnings_heading') %></dt>
+          <dd>
+            <%= render(:partial => 'aspace_content_warnings', :locals => {:content_warnings => content_warnings}) %>
+          </dd>
+        <% end %>
+    <% end %>
+    <!-- Aspace Content Warning Customization End -->
+    <!-- Aspace Reparative Description Customization Begin -->
     <% reparative_descriptions = instance['digital_object']['_resolved']['reparative_descriptions'] %>
     <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') && include_reparative_descriptions %>
         <% unless reparative_descriptions.blank? %>
@@ -23,5 +34,5 @@
           </dd>
         <% end %>
     <% end %>
-    <!-- Aspace Content Warning Customization End -->
+    <!-- Aspace Reparative Description Customization End -->
 <% end %>

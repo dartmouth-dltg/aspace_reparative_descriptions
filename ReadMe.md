@@ -113,17 +113,7 @@ MARC exports include an additional 500 field for each applied tag. Example: 500#
 
 ## Core Overrides
 
-This plugin overrides several methods related to EAD & EAD3 export. If you have modified these or
-are using plugins that also modify these methods, you will need to reconcile them. Specifically
-
-```
-    EADSerializer::serialize_digital_object
-    EAD3Serializer::stream
-    EAD3Serializer::serialize_child
-    EAD3Serializer::serialize_digital_object
-```     
-
-This plugin also overrides the following views
+This plugin overrides the following views
 ```
     /public/views/pdf/_archival_object.html.erb
     /public/views/pdf/_digital_object_links.html.erb
