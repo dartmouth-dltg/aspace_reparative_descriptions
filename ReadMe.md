@@ -109,7 +109,7 @@ digital object, and digital object component).
 EAD, EAD3, and pdf exports include sections with reparative description changes. These are included in 
 `<processinfo>` tags. Digital Object Components are not included in exports.
 
-MARC exports include an additional 500 field for each applied tag. Example: 500##$a{ReparativeDescription}$5{Library_Code}
+MARC exports include an additional 500 field for each applied change. Example: 500##$a{ReparativeDescription}$5{Library_Code}
 
 ## Core Overrides
 
