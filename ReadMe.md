@@ -111,17 +111,6 @@ EAD, EAD3, and pdf exports include sections with reparative description changes.
 
 MARC exports include an additional 500 field for each applied change. Example: 500##$a{ReparativeDescription}$5{Library_Code}
 
-## Core Overrides
-
-This plugin overrides the following views
-```
-    /public/views/pdf/_archival_object.html.erb
-    /public/views/pdf/_digital_object_links.html.erb
-    /public/views/pdf/_resource.html.erb 
-```
-If you are using other plugins which override the same files, you will need to reconcile
-them.
-
 ## Credits
 
 Plugin developed by Joshua Shaw [Joshua.D.Shaw@dartmouth.edu], Digital Library Technologies Group
