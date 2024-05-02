@@ -5,7 +5,7 @@
       <% content_warnings = instance['digital_object']['_resolved']['content_warnings'] %>
       <% file_versions = instance['digital_object']['_resolved']['file_versions'] %>
       <%# Check if any file version will be added to the pdf. Only add content warnings if at least one file version #%>
-      <% include_addition = false %>
+      <% include_additions = false %>
       <% Array(file_versions).each do |file| %>
           <% if file['publish'] && file['file_uri'] && file['xlink_show_attribute'] != 'embed' %>
               <%# set this to true for later use #%>
