@@ -1,5 +1,14 @@
 <!-- Aspace Reparative Description Customization Begin -->
-<% reparative_descriptions = instance['digital_object']['_resolved']['reparative_descriptions'] %>
+<% 
+  reparative_descriptions = instance.dig('digital_object', '_resolved', 'reparative_descriptions') 
+  file_versions = instance.dig('digital_object', '_resolved', 'file_versions')
+  include_additions = false
+  Array(file_versions).each do |file|
+    if file['publish'] && file['file_uri'] && file['xlink_show_attribute'] != 'embed'
+      include_additions = true
+    end
+  end
+%>
 <% if AppConfig[:plugins].include?('aspace_reparative_descriptions') && include_additions %>
   <% unless reparative_descriptions.blank? %>
     <dt><%= I18n.t('pdf_reports.do_reparative_descriptions_heading') %></dt>
