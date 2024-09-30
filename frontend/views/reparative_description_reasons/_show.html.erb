@@ -10,7 +10,7 @@
     <div class="subrecord-form-container">
       <%= readonly.list_for(reparative_description_reasons, "reparative_description_reasons[]") do |rdr, index| %>
           <div class="subrecord-form-fields">
-            <%= readonly.label_with_field "content_warning_code", (rdr['content_warning_code'] && I18n.t('enumerations.content_warning_code.' + rdr['content_warning_code'], rdr['content_warning_code'])) %>
+            <%= readonly.label_with_field "content_warning_code", (rdr['content_warning_code'] && I18n.t('enumerations.content_warning_code.' + rdr['content_warning_code'], default: rdr['content_warning_code'])) %>
           </div>
       <% end %>
     </div>
