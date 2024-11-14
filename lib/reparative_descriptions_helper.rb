@@ -24,7 +24,7 @@ class AspaceReparativeDescriptionsHelper
     end
 
     unless rd['description'].nil?
-      rd_reasons_text += ' ' + rd['description']
+      rd_reasons_text = rd['description'] + ' ' + rd_reasons_text
     end
     
     rd_reasons_text
