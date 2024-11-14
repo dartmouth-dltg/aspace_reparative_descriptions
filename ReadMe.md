@@ -1,10 +1,6 @@
 ArchivesSpace Reparative Descriptions
 =====================================
 
-## Note: In Testing & Development Phase
-This plugin is currently in the beta phase, so please test first with non-production
-systems & data.
-
 ## Getting started
 
 This plugin has been tested with ArchivesSpace versions 3.3.1+. It depends on the 
