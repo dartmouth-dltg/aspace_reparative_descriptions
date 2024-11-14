@@ -25,7 +25,7 @@ en:
     content_warning_code: Harmful Content Type
 
   reparative_description_reasons_template: The description for this material was evaluated and updated to remediate %{reasons} on %{date}.
-  reparative_description_reasons_generic: This description was last revised based on The Statement of Harmful Content And Reparative Description workflow on %{date}.
+  reparative_description_reasons_generic: This description was last revised based on the Harmful Content And Reparative Description Statement workflow on %{date}.
 
   reports:
     reparative_descriptions_list_report:
