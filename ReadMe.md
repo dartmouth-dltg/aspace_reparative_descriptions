@@ -6,6 +6,10 @@ ArchivesSpace Reparative Descriptions
 This plugin has been tested with ArchivesSpace versions 3.3.1+ through 4.2.1. It depends on the 
 plugin Aspace Content Warnings https://github.com/dartmouth-dltg/aspace_content_warnings
 
+The MARC export additionally relies on Aspace Content Warnings to expose the source record
+(`MARCModel#aspace_record`), which ArchivesSpace core does not provide. Without it, 500 fields
+are not added to MARC exports.
+
 Unzip the latest release of the plugin to your
 ArchivesSpace plugins directory:
 
@@ -105,9 +109,20 @@ digital object, and digital object component).
 EAD, EAD3, and pdf exports include sections with reparative description changes. These are included in 
 `<processinfo>` tags. Digital Object Components are not included in exports.
 
+EAD/EAD3 `<processinfo>` can be switched to `<odd>` with `AppConfig[:aspace_reparative_descriptions_note_type]`.
+
+The list report is limited to the repository it is run in.
+
 MARC exports include an additional 500 field for each applied change. Example: 500##$a{ReparativeDescription}$5{Library_Code}
 
 ## Credits
 
 Plugin developed by Joshua Shaw [Joshua.D.Shaw@dartmouth.edu], Digital Library Technologies Group
 Dartmouth Library, Dartmouth College
+
+## AI Assistance Disclosure
+
+The ArchivesSpace 4.2.1 compatibility review and bug fixes (export crashes when no sort order is
+configured, MARC record access, repository scoping of the list report, spec repairs, and related
+cleanup) were developed with the assistance of Claude (Anthropic) via Claude Code. Those changes
+are co-authored by Claude (see the `Co-Authored-By` trailer in the git history).
