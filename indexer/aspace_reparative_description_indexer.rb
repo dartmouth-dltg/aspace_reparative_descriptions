@@ -1,5 +1,3 @@
-require 'aspace_logger'
-
 class IndexerCommon
 
   add_indexer_initialize_hook do |indexer|

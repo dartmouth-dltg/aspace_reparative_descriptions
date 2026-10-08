@@ -1,9 +1,5 @@
 <ul style="list-style: none;">
-  <%
-    if AppConfig.has_key?(:aspace_reparative_descriptions_sort) && ['asc','desc'].include?(AppConfig[:aspace_reparative_descriptions_sort])
-      reparative_descriptions = ReparativeDescriptionsPUIHelper.sort_reparative_descriptions(reparative_descriptions)
-    end 
-  %>
+  <% reparative_descriptions = ReparativeDescriptionsPUIHelper.sort_reparative_descriptions(reparative_descriptions) %>
   <% Array(reparative_descriptions).each do |rd| %>
     <li>
         <p>
