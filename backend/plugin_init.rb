@@ -1,3 +1,9 @@
+# requires the content_warning_code enumeration and MARCModel#aspace_record
+unless Array(AppConfig[:plugins]).include?('aspace_content_warnings')
+  raise "aspace_reparative_descriptions requires the aspace_content_warnings plugin. " \
+        "Add 'aspace_content_warnings' to AppConfig[:plugins]."
+end
+
 require_relative '../lib/reparative_descriptions_helper'
 require_relative 'lib/reparative_descriptions_serializer'
 require_relative 'lib/reparative_descriptions_ead'
