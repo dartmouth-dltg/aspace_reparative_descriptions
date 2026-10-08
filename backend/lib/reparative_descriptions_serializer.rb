@@ -1,5 +1,3 @@
-require 'aspace_logger'
-
 class EADAspaceReparativeDescriptionsSerialize < EADSerializer
 
   def call(data, xml, fragments, context)

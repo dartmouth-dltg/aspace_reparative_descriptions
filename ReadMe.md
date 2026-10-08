@@ -3,7 +3,7 @@ ArchivesSpace Reparative Descriptions
 
 ## Getting started
 
-This plugin has been tested with ArchivesSpace versions 3.3.1+. It depends on the 
+This plugin has been tested with ArchivesSpace versions 3.3.1+ through 4.2.1. It depends on the 
 plugin Aspace Content Warnings https://github.com/dartmouth-dltg/aspace_content_warnings
 
 Unzip the latest release of the plugin to your

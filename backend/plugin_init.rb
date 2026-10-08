@@ -4,9 +4,9 @@ require_relative 'lib/reparative_descriptions_ead'
 require_relative 'lib/reparative_descriptions_ead3'
 require_relative 'lib/reparative_descriptions_marc_serialize'
 
-# allow for odd or scopecontent as the EAD/EAD3 note type
+# allow for odd or processinfo as the EAD/EAD3 note type
 if AppConfig.has_key?(:aspace_reparative_descriptions_note_type)
-  unless ['odd', 'proccessinfo'].include?(AppConfig[:aspace_reparative_descriptions_note_type])
+  unless ['odd', 'processinfo'].include?(AppConfig[:aspace_reparative_descriptions_note_type])
     AppConfig[:aspace_reparative_descriptions_note_type] = 'processinfo'
   end
 else
