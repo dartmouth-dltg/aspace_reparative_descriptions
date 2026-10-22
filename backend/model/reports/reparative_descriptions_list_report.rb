@@ -15,8 +15,8 @@ class ReparativeDescriptionsListReport < AbstractReport
     selects = RECORD_TYPES.map do |table, label|
       "(SELECT
           reparative_description.reparative_description_date AS date,
-          reparative_description.description AS description,
-          #{table}.title AS title,
+          reparative_description.description AS change_description,
+          #{table}.title AS record_title,
           #{db.literal(label)} AS type,
           enumeration_value.value AS tag_code
         FROM reparative_description
@@ -27,7 +27,7 @@ class ReparativeDescriptionsListReport < AbstractReport
     end
 
     "#{selects.join(' UNION ALL ')}
-      ORDER BY title ASC, date ASC, tag_code ASC"
+      ORDER BY record_title ASC, date ASC, tag_code ASC"
   end
 
 end

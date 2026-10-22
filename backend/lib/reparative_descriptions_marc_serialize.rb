@@ -11,7 +11,9 @@ class AspaceReparativeDescriptionsMARCSerialize
   end
 
   def datafields
-    source = @record.aspace_record if @record.respond_to?(:aspace_record)
+    # call through, not respond_to?: other plugins' decorators may wrap @record
+    # with only method_missing, which would hide aspace_record from respond_to?
+    source = @record.aspace_record
     rds = source && source['reparative_descriptions']
     extra_fields = AspaceReparativeDescriptionsHelper.sort_reparative_descriptions(rds).map do |rd|
       DataField.new('500', ' ', ' ', [

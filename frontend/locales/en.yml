@@ -32,6 +32,10 @@ en:
       title: Reparative Description Change List Report
       description: >
         List all Accessions, Resources, Archival Objects, and Digital Objects with Reparative Description changes.
+      record_title: Title
+      change_description: Description
+      type: Record Type
+      tag_code: Harmful Content Type
 
   search:
     multi:
