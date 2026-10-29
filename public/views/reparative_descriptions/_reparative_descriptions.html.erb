@@ -1,10 +1,6 @@
 <h2><%= t('aspace_reparative_descriptions') %></h2>
 <ul class="aspace-reparative-descriptions-list">
-  <% 
-    if AppConfig.has_key?(:aspace_reparative_descriptions_sort) && ['asc','desc'].include?(AppConfig[:aspace_reparative_descriptions_sort])
-      reparative_descriptions = ReparativeDescriptionsPUIHelper.sort_reparative_descriptions(reparative_descriptions)
-    end 
-  %>
+  <% reparative_descriptions = ReparativeDescriptionsPUIHelper.sort_reparative_descriptions(reparative_descriptions) %>
   <% reparative_descriptions.each do |rd| %>
     <li>
       <span class="aspace-reparative-descriptions-reasons">
